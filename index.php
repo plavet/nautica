@@ -14,7 +14,8 @@
  */
 
 get_header(); ?>
-
+<div class="row">
+<div class="span8 pull-right">
 			<?php
 			/* Run the loop to output the posts.
 			 * If you want to overload this in a child theme then include a file
@@ -22,6 +23,9 @@ get_header(); ?>
 			 */
 			 get_template_part( 'loop', 'index' );
 			?>
-
+</div><!-- /span8 pull-right -->
+<div class="span4 pull-left">
 <?php get_sidebar(); ?>
+</div><!-- /span4 pull-left -->
+</div><!-- /row -->
 <?php get_footer(); ?>

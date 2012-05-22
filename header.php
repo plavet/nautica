@@ -21,6 +21,11 @@
 	wp_title( '|', true, 'right' );
 
 	?></title>
+
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta name="description" content="">
+ <meta name="author" content="">
+
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
@@ -41,7 +46,9 @@
 </head>
 
 <body <?php body_class(); ?>>
-
+<div class="container">
+	<div class="row">
+	<div class="span4 main-menu">
 	<h1>
 		<a href="<?php echo home_url( '/' ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
 	</h1>
@@ -53,3 +60,18 @@
 		<?php /* Our navigation menu.  If one isn't filled out, wp_nav_menu falls back to wp_page_menu.  The menu assiged to the primary position is the one used.  If none is assigned, the menu with the lowest ID is used.  */ ?>
 		<?php wp_nav_menu( array( 'container_class' => 'menu-header', 'theme_location' => 'primary' ) ); ?>
 	</div><!-- #access -->
+</div><!-- /span4 -->
+<div class="span12 slides">
+<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("strana1", "" ); } ?>
+</div>
+</div><!-- /row -->
+<div class="row table-center">
+ <ul id="nav2" class="">
+ 	<li><a href="" title="">Test</a></li>
+ 	<li><a href="" title="">Test</a></li>
+ 	<li><a href="" title="">Test</a></li>
+ 	<li><a href="" title="">Test</a></li>
+ 	<li><a href="" title="">Test</a></li>
+ 	<li><a href="" title="">Test</a></li>
+ </ul><!-- / -->
+	</div>

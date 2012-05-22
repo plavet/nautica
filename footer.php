@@ -10,7 +10,10 @@
  * @since Starkers 3.0
  */
 ?>
+<div class="brands">
 
+</div><!-- /brands -->
+<footer class="clearfix">
 <?php
 	/* A sidebar in the footer? Yep. You can can customize
 	 * your footer with four columns of widgets.
@@ -29,5 +32,7 @@
 
 	wp_footer();
 ?>
+</footer>
+</div> <!-- /container -->
 </body>
 </html>
