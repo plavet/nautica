@@ -1,0 +1,12 @@
+/*
+Theme Name: Nautica
+Theme URI: http://kilmulis.com
+Description: Personal web site theme
+Version: 1.0
+Author: Igor Boskovic
+Author URI: http://plavet.net
+Tags: nautica, blue
+*/
+
+@import "css/bootstrap.css";
+@import "css/layout.css";
