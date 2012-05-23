@@ -98,6 +98,11 @@
 <?php /* How to display all other posts. */ ?>
 
 	<?php else : ?>
+
+
+
+
+<article>
 			<h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php twentyten_posted_on(); ?>
 
@@ -123,7 +128,7 @@
 				<?php edit_post_link( __( 'Edit', 'twentyten' ), '| ', '' ); ?>
 
 		<?php comments_template( '', true ); ?>
-
+</article>
 	<?php endif; // This was the if statement that broke the loop into three parts based on categories. ?>
 
 <?php endwhile; // End the loop. Whew. ?>
