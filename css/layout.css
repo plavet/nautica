@@ -7,7 +7,7 @@
 
 /*AUX*/
 a.screen-reader{visibility: hidden;margin:0;padding:0;}
-
+a.post-edit-link{color:yellow;font-family:sans-serif;font-weight:bold;}
 /*FONT*/
 @font-face
 {
@@ -25,43 +25,45 @@ src: url('../fonts/trajanprobold.ttf'),
 
 /*GENERAL*/
 body{background-color: #001638; font-family: text, sans-serif;}
-.wrap {background: url(../images/container-bg.png) repeat-y;width:970px;margin:0 auto;}
+.wrap {background: url(../images/container-bg.png) repeat-y;width:982px;margin:0 auto;}
 .container{
-background-color:#062552;color:#fff;width:880px;position:relative;border-top:5px solid #0092cf;
+background-color:#062552;color:#fff;width:940px;position:relative;border-top:5px solid #0092cf;
 }
 
 
 /*Main nav*/
 .span4.main-menu {
-position:absolute;z-index: 10000;width:250px;
-height:500px;background: url(../images/main-nav-bg.png) repeat;
+position:absolute;z-index: 10000;width:252px;
+height:572px;background: url(../images/main-nav-bg.png) repeat;
 }
 
-ul#menu-primary-menu {list-style: none;margin:10px 0 0 0;}
+ul#menu-primary-menu {list-style: none;margin:15px 0 0 0;}
 ul#menu-primary-menu li {padding: 0; margin: 0;}
 ul#menu-primary-menu a {
-font-family: text;font-size:20px;color:#fff;
-padding: 6px 5px 5px 20px;display: block;margin-left:0;
-text-shadow: 2px 2px 2px #000000;
-filter: dropshadow(color=#000000, offx=2, offy=2);
+font-family: text;font-size:14px;color:#fff;font-weight:bold;
+padding: 9px 0px 9px 20px;display: block;margin-left:0;
+text-shadow: 2px 2px 2px #242424;
+filter: dropshadow(color=#242424, offx=2, offy=2);
 -webkit-transition:all .3s;
 -moz-transition:all .3s;
 -o-transition:all .3s;
 -ms-transition:all .3s;
 transition:all .3s;
 }
-ul#menu-primary-menu a:hover {text-decoration:none;color:#f3f000;padding-left:25px;background: url(../images/main-nav-hover-bg.png) repeat;}
+ul#menu-primary-menu a:hover {
+text-decoration:none;color:#f3f000;padding-left:25px;background: url(../images/main-nav-hover-bg.png) repeat;
+}
 
 ul#menu-primary-menu li.current-menu-item a {
 text-decoration:none;color:#f3f000;background: url(../images/main-nav-hover-bg.png) repeat;
 }
 
 /*Slides*/
-.span12.slides{width:880px;height:500px;}
+.span12.slides{width:940px;height:572px;}
 .meteor-slides .meteor-buttons {
 width:150px !important;
-bottom:30px !important;
-left:740px !important;
+bottom: 35px !important;
+left: 800px !important;
 }
 
 /*buttons*/
@@ -81,8 +83,8 @@ text-indent: -9999px;
 /*Secondary nav*/
 .row.secondary-menu{
 margin: 1px 0 0 0;
-background-color: #0092CF;
-width: 880px;
+background-color: #025C90;
+width: 940px;
 }
 .table-center {
 display: table;   /* Allow the centering to work */
@@ -91,9 +93,9 @@ margin: 0 auto;
 ul#menu-secondary-menu {list-style: none;padding: 7px 0 0 0;}
 ul#menu-secondary-menu li {display:inline;text-align:center;margin:0;padding:0;}
 ul#menu-secondary-menu a {
-font-family: text;font-size:20px;color:#fff;padding: 5px;
-text-shadow: 2px 2px 2px #000000;
-filter: dropshadow(color=#000000, offx=2, offy=2);
+font-family: text;font-size:14px;color:#fff;padding: 5px;font-weight:bold;
+text-shadow: 2px 2px 2px #242424;
+filter: dropshadow(color=#242424, offx=2, offy=2);
 -webkit-transition:all .3s;
 -moz-transition:all .3s;
 -o-transition:all .3s;
@@ -103,13 +105,64 @@ transition:all .3s;
 ul#menu-secondary-menu a:hover {text-decoration:none;color:#f3f000;}
 
 /*Content layout*/
-.span8.pull-right {width:600px;}
-.span4.pull-left {width:250px;}
+.span8.pull-right {width:688px;margin-left: 0;}
+.span4.pull-left {width:252px;}
 
 .span4.pull-left ul {list-style:none;margin:0;} 
 
 
 /*Brands & Footer*/
-.brands {background-color: green; width:960px; height:200px;position:absolute;left:-40px;}
+.brands {background-color: green; width:940px; height:200px;position:absolute;left:0;}
 
 footer {margin-top:200px;text-align:center;border-bottom:5px solid #0092cf;}
+
+/*POSTS*/
+h1.naslov {
+padding: 10px 0 10px 20px;
+font-weight: normal;color: #f3f000;
+}
+
+/*links*/
+.row.aktuelno-promo{background-color:#034373;}
+
+.promo-wrap {
+display:block;border-bottom: 1px solid 
+white;margin: 0 20px 0 40px;padding: 30px 0 0 0;
+height: 105px;
+}
+.span2.goga-logo{margin:0;}
+.span6.links {}
+
+ul#cenovnik{
+list-style: none;
+margin: 0;font-size: 20px;
+}
+ul#cenovnik li {margin:0;padding:0;}
+ul#cenovnik li a {
+font-family: text;font-size:20px;color:#fff;padding:5px 0 5px 0;font-weight:bold;
+text-shadow: 2px 2px 2px #242424; display:block;
+filter: dropshadow(color=#242424, offx=2, offy=2);
+-webkit-transition:all .3s;
+-moz-transition:all .3s;
+-o-transition:all .3s;
+-ms-transition:all .3s;
+transition:all .3s;
+}
+ul#cenovnik li a:hover{text-decoration:none;color:#f3f000;}
+
+article.aktuelno h2 a {
+font-family: text;font-size:24px;color:#fff;padding: 0 0 20px 0;font-weight:bold;
+text-shadow: 2px 2px 2px #242424; display:block;
+filter: dropshadow(color=#242424, offx=2, offy=2);
+-webkit-transition:all .3s;
+-moz-transition:all .3s;
+-o-transition:all .3s;
+-ms-transition:all .3s;
+transition:all .3s;
+}
+article.aktuelno h2 a:hover {text-decoration:none;color:#f3f000;}
+
+.home .span8.pull-right{margin:0;}
+article.aktuelno{
+margin:0;background-color:#034373;padding:20px;
+}

@@ -61,7 +61,7 @@
 	</div><!-- #access -->
 </div><!-- /span4 -->
 <div class="span12 slides">
-<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("strana1", "" ); } ?>
+<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("aktuelno", "" ); } ?>
 </div>
 </div><!-- /row -->
 

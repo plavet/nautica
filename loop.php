@@ -100,11 +100,34 @@
 	<?php else : ?>
 
 
+<?php if ( is_front_page() ) { ?>
+  <h1 class="naslov">Aktuelno</h1>
+<?php } elseif ( is_page() ) { ?>   
+  <h2 class="naslov"><?php the_title(); ?></h2>
+<?php } else { ?>
+
+<?php } ?>
+
+<div class="row aktuelno-promo">
+
+<div class="promo-wrap">
+<div class="span2 goga-logo">
+	<img src="<?php bloginfo('template_url'); ?>/images/goga-logo-aktuelno.png" />
+</div>
+<div class="span6 links">
+	<ul id="cenovnik">
+		<li><a href="#" title="Cenovnik usluga 2012. godina">Cenovnik usluga 2012. godina</a></li>
+		<li><a href="#" title="Katalog novih plovila - maj 2012.">Katalog novih plovila - maj 2012.</a></li>
+		<li><a href="#" title="Katalog polovnih plovila - maj 2012.">Katalog polovnih plovila - maj 2012.</a></li>
+	</ul><!-- / -->
+</div>
+</div><!-- /promo-wrap -->
+</div><!-- /row -->
 
 
-<article>
-			<h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Permalink to %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
-			<?php twentyten_posted_on(); ?>
+<article class="aktuelno">
+			<h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Bookmark %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
+			<?php //twentyten_posted_on(); ?>
 
 	<?php if ( is_archive() || is_search() ) : // Only display excerpts for archives and search. ?>
 			<?php the_excerpt(); ?>
@@ -113,21 +136,21 @@
 			<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 	<?php endif; ?>
 
-				<?php if ( count( get_the_category() ) ) : ?>
-					<?php printf( __( 'Posted in %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
-					|
-				<?php endif; ?>
-				<?php
-					$tags_list = get_the_tag_list( '', ', ' );
-					if ( $tags_list ):
+				<?php // if ( count( get_the_category() ) ) : ?>
+					<?php // printf( __( 'Posted in %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-cat-links', get_the_category_list( ', ' ) ); ?>
+					
+				<?php //endif; ?>
+				<?php 
+					//$tags_list = get_the_tag_list( '', ', ' );
+					//if ( $tags_list ):
 				?>
-					<?php printf( __( 'Tagged %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
-					|
-				<?php endif; ?>
-				<?php comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?>
-				<?php edit_post_link( __( 'Edit', 'twentyten' ), '| ', '' ); ?>
+					<?php //printf( __( 'Tagged %2$s', 'twentyten' ), 'entry-utility-prep entry-utility-prep-tag-links', $tags_list ); ?>
+					
+				<?php //endif; ?>
+				<?php //comments_popup_link( __( 'Leave a comment', 'twentyten' ), __( '1 Comment', 'twentyten' ), __( '% Comments', 'twentyten' ) ); ?>
+				<?php edit_post_link( __( 'Edit', 'twentyten' ), ' ', '' ); ?>
 
-		<?php comments_template( '', true ); ?>
+		<?php //comments_template( '', true ); ?>
 </article>
 	<?php endif; // This was the if statement that broke the loop into three parts based on categories. ?>
 
