@@ -27,6 +27,8 @@
  <meta name="author" content="">
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
+
+<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/prettyPhoto.css">
 <link rel="stylesheet" type="text/css" media="all" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
 <?php
@@ -43,6 +45,11 @@
 	 */
 	wp_head();
 ?>
+
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.7.2.min.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/jquery.prettyPhoto.js"></script>
+<script src="<?php bloginfo('template_directory'); ?>/js/engine.js"></script>
+
 </head>
 
 <body <?php body_class(); ?>>

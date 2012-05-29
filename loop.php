@@ -100,31 +100,6 @@
 	<?php else : ?>
 
 
-<?php if ( is_front_page() ) { ?>
-  <h1 class="naslov">Aktuelno</h1>
-<?php } elseif ( is_page() ) { ?>   
-  <h2 class="naslov"><?php the_title(); ?></h2>
-<?php } else { ?>
-
-<?php } ?>
-
-<div class="row aktuelno-promo">
-
-<div class="promo-wrap">
-<div class="span2 goga-logo">
-	<img src="<?php bloginfo('template_url'); ?>/images/goga-logo-aktuelno.png" />
-</div>
-<div class="span6 links">
-	<ul id="cenovnik">
-		<li><a href="#" title="Cenovnik usluga 2012. godina">Cenovnik usluga 2012. godina</a></li>
-		<li><a href="#" title="Katalog novih plovila - maj 2012.">Katalog novih plovila - maj 2012.</a></li>
-		<li><a href="#" title="Katalog polovnih plovila - maj 2012.">Katalog polovnih plovila - maj 2012.</a></li>
-	</ul><!-- / -->
-</div>
-</div><!-- /promo-wrap -->
-</div><!-- /row -->
-
-
 <article class="aktuelno">
 			<h2><a href="<?php the_permalink(); ?>" title="<?php printf( esc_attr__( 'Bookmark %s', 'twentyten' ), the_title_attribute( 'echo=0' ) ); ?>" rel="bookmark"><?php the_title(); ?></a></h2>
 			<?php //twentyten_posted_on(); ?>

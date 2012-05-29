@@ -8,14 +8,6 @@
  */
 ?>
 
-<ul id="" class="">
-	<li><a href="" title=""><img src="http://placehold.it/252x280&text=BANER">
-</a></li>
-	<li><a href="" title=""><img src="http://placehold.it/252x280/bbbbbb/000000&text=BANER2"></a></li>
-
-</ul><!-- / -->
-
-
 			<ul class="xoxo">
 
 <?php

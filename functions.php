@@ -280,13 +280,13 @@ add_filter( 'excerpt_more', 'twentyten_auto_excerpt_more' );
  * @since Twenty Ten 1.0
  * @return string Excerpt with a pretty "Continue Reading" link
  */
-function twentyten_custom_excerpt_more( $output ) {
-	if ( has_excerpt() && ! is_attachment() ) {
-		$output .= twentyten_continue_reading_link();
-	}
-	return $output;
-}
-add_filter( 'get_the_excerpt', 'twentyten_custom_excerpt_more' );
+//function twentyten_custom_excerpt_more( $output ) {
+//	if ( has_excerpt() && ! is_attachment() ) {
+//		$output .= twentyten_continue_reading_link();
+//	}
+//	return $output;
+//}
+//add_filter( 'get_the_excerpt', 'twentyten_custom_excerpt_more' );
 
 /**
  * Remove inline styles printed when the gallery shortcode is used.
@@ -512,3 +512,60 @@ function my_custom_menus() {
         )
     );
 }
+
+/**
+ * Custom Nautica Lista podstrana + custom thumbnail
+ *
+ * note to self linija 283 ukinuta jer mi bagova kod
+ */
+
+// pre svega support za page post types da imaju excerpt
+add_post_type_support('page','excerpt');
+
+function lista_podstrana() {
+
+//nova velicina featured image thumbova
+add_image_size( 'podstrane-thumb', 280, 145, true );
+
+// custom excerpt read more link → cisto vizuelno 
+add_filter('get_the_excerpt', 'manual_excerpt_more');
+function manual_excerpt_more($excerpt) {
+	$excerpt_more = '';
+	if( has_excerpt() ) {
+    	$excerpt_more = ' →';
+	}
+	return $excerpt . $excerpt_more;
+}
+
+	global $post;
+
+	//query subpages
+	$args = array(
+		'post_parent' => $post->ID,
+		'post_type' => 'page',
+		'orderby' => 'menu_order',
+		'order'=>'ASC'
+	);
+	$subpages = new WP_query($args);
+
+	// create output
+	if ($subpages->have_posts()) :
+		$output = '<ul id="lista-podstrana">';
+		while ($subpages->have_posts()) : $subpages->the_post();
+			$output .= '<li><a href="'.get_permalink().'" title="'.get_the_title().'"><span class="lista-naslov">'.get_the_title().'</span>
+						<span class="span4"><p>'.get_the_excerpt().'</p>'.get_the_post_thumbnail($page->ID, 'podstrane-thumb').'</span></a></li>';
+						
+		endwhile;
+		$output .= '</ul>';
+	else :
+		$output = '<p>No subpages found.</p>';
+	endif;
+
+	// reset the query
+	wp_reset_postdata();
+
+	// return nesto
+	return $output;
+}
+
+add_shortcode('lista_podstrana', 'lista_podstrana');
