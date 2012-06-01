@@ -15,8 +15,10 @@ get_header(); ?>
 
 					<?php if ( is_front_page() ) { ?>
 						<h1 class="naslov">Aktuelno</h1>
-					<?php } else { ?>	
-						<h1 class="naslov"><?php the_title(); ?></h1>
+					<?php } else { ?>
+					
+					<?php if(function_exists(simple_breadcrumb)) {simple_breadcrumb();} ?>
+
 					<?php } ?>				
 	<!-- Sekcija `armonika -->
 	<div id="armonika-kutija">

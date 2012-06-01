@@ -67,16 +67,89 @@
 
 	</div><!-- #access -->
 </div><!-- /span4 -->
-<div class="span12 slides">
-<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("aktuelno", "" ); } ?>
-</div>
+
+<!--SLIDES-->
+<?php if ( is_front_page() ) { ?>
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("aktuelno", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('kompanija-goga') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("kompanija-goga", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('lager-novih-plovila') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("lager-novih-plovila", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('ponuda-polovnih-plovila') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("ponuda-polovnih-plovila", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('prodaja-plovila') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("prodaja-plovila", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('prodaja-opreme') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("prodaja-opreme", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('usluge') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("usluge", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('sajam') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("sajam", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('yachting-club-goga') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("yachting-club-goga", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('kontakt') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("kontakt", "" ); } ?>
+   </div>
+<?php } elseif ( is_page( array('monterey', 'sport-boats', 'm-series', 'supersports', 'sport-cruisers-yachts')) ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("monterey", "" ); } ?>
+   </div>
+<?php } elseif ( is_page( array('glastron', 'bowriders', 'ski-fish', 'deck-boats', 'cabin-cruisers')) ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("glastron", "" ); } ?>
+   </div>
+<?php } elseif ( is_page( array('chris-craft', 'corsair', 'launch', 'catalina', 'future-models')) ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("chris-craft", "" ); } ?>
+   </div>
+<?php } elseif ( is_page( array('sun-tracker', 'regency-pontoons', 'signature-pontoons', 'classic-pontoons')) ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("sun-tracker", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('marquis') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("marquis", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('carver') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("carver", "" ); } ?>
+   </div>
+<?php } elseif ( is_page('jobe') ) { ?>   
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("jobe", "" ); } ?>
+   </div>
+<?php } else { ?>
+  <div class="span12 slides">
+	<?php if ( function_exists( 'meteor_slideshow' ) ) { meteor_slideshow("aktuelno", "" ); } ?>
+   </div>
+<?php } ?>
+<!--/SLIDES-->
+
 </div><!-- /row -->
 
 <div class="row secondary-menu">
 	<div class="table-center">
 
-<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
+	<?php wp_nav_menu( array( 'theme_location' => 'secondary-menu' ) ); ?>
 
-
+   </div>
 </div>
-	</div>

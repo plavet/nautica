@@ -42,6 +42,16 @@ background-color:#062552;color:#fff;width:940px;position:relative;border-top:5px
 }
 
 
+.armonika a {text-decoration:underline;
+-webkit-transition:all 0.3s;
+-moz-transition:all 0.3s;
+-o-transition:all 0.3s;
+-ms-transition:all 0.3s;
+transition:all 0.3s;
+}
+ 
+.armonika a:hover{color:#FEFA1E;}
+
 /*Main nav*/
 .span4.main-menu {
 position:absolute;z-index: 10000;width:252px;
@@ -195,6 +205,8 @@ background: url(../images/main-nav-hover-bg.png) repeat;
 background:url(../images/brands.png) no-repeat; width:1102px; height:302px;
 position:absolute;left:-81px;margin-top:-30px;
 }
+ul li {list-style:none !important;}
+ul {list-style:none !important;}
 
 ul.brand-list li {list-style:none;display:inline-block;}
 
@@ -206,9 +218,10 @@ display:block;
 ul.brand-list{
 position: absolute;
 bottom: 0;left: 0;
+list-style:none;
 }
 
-ul.group1, ul.group2, ul.group3 {display:block; position:absolute;}
+ul.group1, ul.group2, ul.group3 {list-style:none;display:block; position:absolute;}
 ul.group1 li, ul.group2 li, ul.group3 li {list-style:none;}
 
 ul.group1 {
@@ -291,9 +304,9 @@ bottom: 60px;
 
 /*footer*/
 
-footer {margin-top:245px;text-align:center;border-bottom:5px solid #0092cf;}
+footer {margin-top:240px;text-align:center;border-bottom:5px solid #0092cf;}
 
-footer p {color: #0790CB;font-family: text;font-size: 12px;position:relative;}
+footer p {color: #0790CB;font-family: text;font-size: 11px;position:relative;}
 footer p a {
 text-shadow: 2px 2px 2px #242424;
 filter: dropshadow(color=#242424, offx=2, offy=2);
@@ -395,8 +408,15 @@ transition:all 0.3s;
 width: 688px;float: left;background-color: #074173;
 border-bottom: 1px solid #0769A0;padding: 20px 0 20px 0;
 }
-
-#armonika-kutija{background-color: #074173;margin-bottom: 20px;}
+/*
+.armonika-sadrzaj{
+width: 100%;
+float: left;
+height: 100%;
+padding: 20px 0 20px 0;	
+}
+*/
+#armonika-kutija{background-color: #074173;margin-bottom: 40px;}
 
 /*TABELA*/
 .span4.tabela {width:270px;}
@@ -508,3 +528,10 @@ padding:2px; background-color:#fff;
 -moz-border-radius: 2px;
 border-radius: 2px;
 }
+
+/*BREADCRUMB*/
+.breadcrumb {
+padding: 0 !important;
+}
+
+h1.naslov a {color:#FEFA1E;}

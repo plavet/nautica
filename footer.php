@@ -23,8 +23,8 @@
 			<li><a href="#" id="" rel="external" title="Glastron" class="ir glastron">
 				glastron
 			</a></li>
-		</li></ul>
-		<li>
+		</ul></li>
+				<li>
 			<ul class="group2">
 			<li><a href="#" id="" rel="external" title="Chris Craft" class="ir chris_craft">
 				chris craft
@@ -35,8 +35,8 @@
 			<li><a href="#" id="" rel="external" title="Jobe" class="ir jobe">
 				jobe
 			</a></li>
-		</li></ul>
-		<li>
+		</ul></li>
+				<li>
 			<ul class="group3">
 			<li><a href="#" id="" rel="external" title="Marquis" class="ir marquis">
 				marquis
@@ -44,7 +44,7 @@
 			<li><a href="#" id="" rel="external" title="Carver Yachts" class="ir carver">
 				carver yachts
 			</a></li>
-		</li></ul>
+			</ul></li>
 	</ul><!--/brand-list-->
 </div><!-- /brands -->
 
