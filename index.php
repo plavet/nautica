@@ -24,7 +24,7 @@ get_header(); ?>
 <?php } else { ?>
 
 <?php } ?>
-
+<div class="aktuelno-wrap">
 <div class="row aktuelno-promo">
 
 <div class="promo-wrap">
@@ -47,6 +47,7 @@ get_header(); ?>
 			 */
 			 get_template_part( 'loop', 'index' );
 			?>
+		</div><!--/aktuelno-wrap-->
 </div><!-- /span8 pull-right -->
 <div class="span4 pull-left">
 <?php get_sidebar(); ?>

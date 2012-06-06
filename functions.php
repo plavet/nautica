@@ -605,7 +605,9 @@ function simple_breadcrumb() {
 			}
 			echo the_title();echo "</h1> ";
 		} elseif (is_page()) {
+			echo '<h1 class="naslov">';
 			echo the_title();
+			echo "</h1> ";
 		} elseif (is_404()) {
 			echo "404";
 		}

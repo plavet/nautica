@@ -49,7 +49,6 @@
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery-1.7.2.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.prettyPhoto.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/engine.js"></script>
-
 </head>
 
 <body <?php body_class(); ?>>
