@@ -8,16 +8,15 @@
  */
 
 get_header(); ?>
-
+<div class="row">
+<div class="span8 pull-right">
 <?php if ( have_posts() ) while ( have_posts() ) : the_post(); ?>
 
-					<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
-					<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
+					<h1 class="naslov"><?php the_title(); ?></h1>
 
-					<h1><?php the_title(); ?></h1>
-
-						<?php twentyten_posted_on(); ?>
-
+						<?php // twentyten_posted_on(); ?>
+<div class="sadrzaj">
+						<div class="strane-wrap">
 						<?php the_content(); ?>
 						<?php wp_link_pages( array( 'before' => '' . __( 'Pages:', 'twentyten' ), 'after' => '' ) ); ?>
 
@@ -30,15 +29,20 @@ get_header(); ?>
 							</a>
 <?php endif; ?>
 
-						<?php twentyten_posted_in(); ?>
+						<?php // twentyten_posted_in(); ?>
 						<?php edit_post_link( __( 'Edit', 'twentyten' ), '', '' ); ?>
 
 				<?php previous_post_link( '%link', '' . _x( '&larr;', 'Previous post link', 'twentyten' ) . ' %title' ); ?>
 				<?php next_post_link( '%link', '%title ' . _x( '&rarr;', 'Next post link', 'twentyten' ) . '' ); ?>
-
-				<?php comments_template( '', true ); ?>
+</div><!--/strane-wrap-->
+</div><!--/sadrzaj-->
+				<?php // comments_template( '', true ); ?>
 
 <?php endwhile; // end of the loop. ?>
 
+</div><!-- /span8 pull-right -->
+<div class="span4 pull-left">
 <?php get_sidebar(); ?>
+</div><!-- /span4 pull-left -->
+</div><!-- /row -->
 <?php get_footer(); ?>

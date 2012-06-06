@@ -11,12 +11,82 @@ a.post-edit-link{
 color:yellow;font-family:sans-serif;font-weight:bold;
 position: relative;display: block;z-index: 1;
 }
+
+a {
+color: #0790CB;
+
+}
+
+a:hover{
+text-decoration: none;color: #FEFA1E;
+}
+
 .ir {
 border:0;
 font: 0/0 a;
 text-shadow: none;
 color: transparent;
 background-color: transparent;
+}
+
+h2.podnaslov-armonika{
+font-family: text;
+font-size: 22px !important;
+color: #fff;
+padding: 0 0 20px 0;
+font-weight: bold;
+text-shadow: 2px 2px 2px #242424;
+display: block;
+filter: dropshadow(color=#242424, offx=2, offy=2);
+}
+
+.strane-wrap{
+display: block;
+}
+.sadrzaj{
+margin: 0;padding: 20px;text-align: justify;
+background-color: #034373;
+}
+
+.slichica{
+border-radius: 2px;
+padding: 1px;
+background-color: #fff;
+}
+
+.slichica.pull-right{margin: 10px 0 10px 20px;}
+.slichica.pull-left{margin: 10px 20px 10px 0;}
+
+p{text-align: justify;}
+
+.span8.tekst{
+width: 648px !important;
+margin: 0;
+padding: 0 0px 20px 20px;
+}
+
+a:focus{outline:none;}
+
+.razmak-crta{
+padding:0 0 20px 0; margin:0 0 20px 0;
+border-bottom:1px solid #fff;
+}
+
+ul.glista{
+font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+list-style:disc outside none !important;
+}
+ul.glista li{list-style:disc outside none !important;}
+
+.custom-tekst{
+font-family: text;font-size:14px;color:#fff;font-weight:bold;
+margin:0 0 9px 0; line-height:18px;
+text-shadow: 2px 2px 2px #242424;
+filter: dropshadow(color=#242424, offx=2, offy=2);
+}
+
+.aktuelno-wrap{
+background-color: #034373;
 }
 
 /*FONT*/
@@ -54,7 +124,7 @@ transition:all 0.3s;
 
 /*Main nav*/
 .span4.main-menu {
-position:absolute;z-index: 10000;width:252px;
+position:absolute;z-index: 1000;width:252px;
 height:568px;background: url(../images/main-nav-bg.png) repeat;
 }
 
@@ -158,16 +228,15 @@ margin: 0;
 
 ul#menu-secondary-menu li ul li.current-menu-item a{ 
 text-decoration: none;
-color: 
-#F3F000;
+color: #F3F000;
 background: url(../images/main-nav-hover-bg.png) repeat;
 }
-
 
 ul#menu-secondary-menu li ul li a{ 
 display: block;
 padding: 4px 5px 5px 10px;
 }
+
 ul#menu-secondary-menu li:hover ul {
   display: block;
   opacity: 1;
@@ -188,8 +257,23 @@ ul#menu-secondary-menu a:hover {text-decoration:none;color:#f3f000;background: u
 
 ul#menu-secondary-menu li.current-menu-item a {
 text-decoration: none;
-color: 
-#F3F000;
+color: #F3F000;
+background: url(../images/main-nav-hover-bg.png) repeat;
+}
+
+ul#menu-secondary-menu li.current-menu-item ul.sub-menu li a{
+background:none; color:#fff;
+text-shadow: 2px 2px 2px #242424;
+filter: dropshadow(color=#242424, offx=2, offy=2);
+-webkit-transition:all 0.3s;
+-moz-transition:all 0.3s;
+-o-transition:all 0.3s;
+-ms-transition:all 0.3s;
+transition:all 0.3s;
+}
+
+ul#menu-secondary-menu li.current-menu-item ul.sub-menu li a:hover{
+color: #F3F000;
 background: url(../images/main-nav-hover-bg.png) repeat;
 }
 
@@ -306,7 +390,7 @@ bottom: 60px;
 
 footer {margin-top:240px;text-align:center;border-bottom:5px solid #0092cf;}
 
-footer p {color: #0790CB;font-family: text;font-size: 11px;position:relative;}
+footer p {text-align: center;color: #0790CB;font-family: text;font-size: 11px;position:relative;}
 footer p a {
 text-shadow: 2px 2px 2px #242424;
 filter: dropshadow(color=#242424, offx=2, offy=2);
@@ -329,9 +413,8 @@ font-weight: normal;color: #f3f000;
 .row.aktuelno-promo{background-color:#034373;margin: 0;width: 688px;}
 
 .promo-wrap {
-display:block;border-bottom: 1px solid 
-white;margin: 0 20px 0 20px;padding: 30px 0 0 0;
-height: 105px;
+display:block;margin: 0 20px 0 20px;
+padding: 30px 0 0 0;height: 105px;
 }
 .span2.goga-logo{margin:0;}
 .span6.links {}
@@ -367,7 +450,10 @@ article.aktuelno h2 a:hover {text-decoration:none;color:#f3f000;}
 
 .home .span8.pull-right{margin:0;}
 article.aktuelno{
-margin:0;background-color:#034373;padding:20px;
+border-top: 1px solid #fff;
+margin: 0 20px 0 20px;
+background-color: #034373;
+padding: 20px 0 20px 0;
 }
 
 /*ARMONIKA*/
@@ -406,7 +492,7 @@ transition:all 0.3s;
 
 .armonika {
 width: 688px;float: left;background-color: #074173;
-border-bottom: 1px solid #0769A0;padding: 20px 0 20px 0;
+border-bottom: 1px solid #0769A0;padding: 10px 0 20px 0;
 }
 /*
 .armonika-sadrzaj{
@@ -442,16 +528,11 @@ vertical-align: top;
 border-top: 1px solid #0769A0;
 }
 
-table tr {
-height: 45px;
-}
-.table td {width: 70px;}
-
 .table tbody tr td,
 .table tbody tr th {
 background-color: #074173;
 text-shadow: 0 0 0 #242424;
-filter: dropshadow(color=#242424, offx=0, offy=0);
+
 -webkit-transition:all 0.3s;
 -moz-transition:all 0.3s;
 -o-transition:all 0.3s;
@@ -463,9 +544,14 @@ transition:all 0.3s;
 .table tbody tr:hover th {
  background-color: #084B86;
  text-shadow: 2px 2px 2px #242424;
-filter: dropshadow(color=#242424, offx=2, offy=2);
 }
 
+.table td {
+width: 70px;
+}
+table tr {
+height: 45px;
+}
 
 /*ARMONIKA INFO*/
 
@@ -474,7 +560,7 @@ text-align: justify;
 width: 360px;
 }
 
-ul#pregled-proizvoda {padding: 20px 0 0 5px;}
+ul#pregled-proizvoda {padding: 0 0 0 5px;}
 ul#pregled-proizvoda li.span2 {width:110px;margin-left: 15px; margin-bottom: 25px;}
 
 .thumbnail {background-color:#fff; padding:2px;}
