@@ -33,9 +33,9 @@ get_header(); ?>
 </div>
 <div class="span6 links">
 	<ul id="cenovnik">
-		<li><a href="#" title="Cenovnik usluga 2012. godina">Cenovnik usluga 2012. godina</a></li>
-		<li><a href="#" title="Katalog novih plovila - maj 2012.">Katalog novih plovila - maj 2012.</a></li>
-		<li><a href="#" title="Katalog polovnih plovila - maj 2012.">Katalog polovnih plovila - maj 2012.</a></li>
+		<li><a href="http://nautica.rs/documents/GOGA%20-%20Cenovnik%20usluga%20-%20jun%202012.pdf" title="Preuzmite PDF dokument" target="_blank">Cenovnik usluga 2012. godina</a></li>
+		<li><a href="http://nautica.rs/documents/GOGA%20-%20Lager%20novih%20plovila%20-%20jun%202012.pdf" title="Preuzmite PDF dokument" target="_blank">Lager novih plovila - jun 2012.</a></li>
+		<li><a href="http://nautica.rs/documents/GOGA%20-%20Katalog%20polovnih%20plovila%20-%20jun%202012.pdf" title="Preuzmite PDF dokument" target="_blank">Katalog polovnih plovila - jun 2012.</a></li>
 	</ul><!-- / -->
 </div>
 </div><!-- /promo-wrap -->

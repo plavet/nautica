@@ -1,10 +1,5 @@
 $(document).ready(function() {
 
-//Open link in new tab
-	$("a[rel^='external']").click(function(){
-	     this.target = "_blank";
-	});
-
 // `armonika
 
   $('.armonika').hide();
@@ -108,4 +103,5 @@ $("a[rel^='prettyPhoto']").prettyPhoto({
 			custom_markup: '',
 			social_tools: 'false' /* html or false to disable */
 		});
+
 });
